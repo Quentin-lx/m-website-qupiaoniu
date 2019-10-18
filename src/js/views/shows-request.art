@@ -1,5 +1,5 @@
 {{each list}}
-<li>
+<li data-id="{{$value.id}}">
     <div class="postershow">
         <img src={{$value.poster}} alt="">
     </div>

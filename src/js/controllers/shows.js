@@ -18,7 +18,10 @@ class shows{
             list
         });
         $('.allshows-list >ul').html(requestHtml);
-
+        $('.allshows-list ul li ').on('tap',function(){
+            let id = $(this).attr('data-id');
+            location.hash = `detail/${id}`
+        })
     }
     async render(){
         let that = this; 

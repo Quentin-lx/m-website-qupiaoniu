@@ -6,6 +6,7 @@ import positionController from '../controllers/position.js';
 import showsController from '../controllers/shows.js';
 import memberController from '../controllers/member.js';
 import loginController from '../controllers/login.js';
+import detailController from '../controllers/detail.js';
 
 
 class Router{
@@ -38,7 +39,8 @@ class Router{
             positionController,
             showsController,
             memberController,
-            loginController
+            loginController,
+            detailController
         }
         pageControllers[hash + 'Controller'].render(); 
 

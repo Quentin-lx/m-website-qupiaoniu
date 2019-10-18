@@ -27,13 +27,16 @@ function packScss(){
     .pipe(connect.reload());
 }
 function jsCopy(){
-    return src('../js/app.js')
+    return src('../js/*.js')
     .pipe(webpack({
         mode : 'development',
-        entry : '../js/app.js',
+        entry : {
+            app : '../js/app.js',
+            appCeshi : '../js/appCeshi.js'
+        },
         output : {
             path : path.resolve(__dirname,distPath),
-            filename : 'app.js'
+            filename : '[name].js'
         },
         module : {
             rules : [
