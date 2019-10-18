@@ -1,0 +1,77 @@
+.allshows {
+  width: 100%;
+  height: 100%; }
+  .allshows > nav {
+    width: 100%;
+    height: .39rem;
+    overflow-x: scroll;
+    overflow-y: hidden; }
+    .allshows > nav > ul {
+      width: 800px;
+      height: 100%;
+      display: flex;
+      justify-content: space-around; }
+      .allshows > nav > ul > li {
+        height: 100%;
+        font-size: .14rem;
+        line-height: .39rem;
+        box-sizing: border-box; }
+        .allshows > nav > ul > li.active2 {
+          border-bottom: #ff2661 solid 2px;
+          color: #ff2661; }
+  .allshows .sort-ways {
+    width: 100%;
+    height: .35rem;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15); }
+    .allshows .sort-ways > ul {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-around; }
+      .allshows .sort-ways > ul > li {
+        height: 100%;
+        font-size: .14rem;
+        line-height: .35rem; }
+  .allshows .allshows-list {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 .15rem;
+    height: auto; }
+    .allshows .allshows-list ul {
+      width: 100%;
+      height: 100%; }
+      .allshows .allshows-list ul li {
+        width: 100%;
+        height: 1.48rem;
+        display: flex;
+        justify-content: space-between; }
+        .allshows .allshows-list ul li > .postershow {
+          width: 22%;
+          height: 1.48rem; }
+          .allshows .allshows-list ul li > .postershow img {
+            padding-top: .15rem;
+            width: 100%;
+            height: 85%; }
+        .allshows .allshows-list ul li .showdetail {
+          width: 70%;
+          height: 1.48rem;
+          padding-top: .15rem; }
+          .allshows .allshows-list ul li .showdetail .showname {
+            font-size: 0.15rem;
+            color: #333;
+            font-weight: bold;
+            width: 2.49rem; }
+          .allshows .allshows-list ul li .showdetail .time-place {
+            display: block;
+            font-size: 0.12rem;
+            color: #999;
+            margin-top: 0.09rem; }
+          .allshows .allshows-list ul li .showdetail .comment {
+            display: block;
+            font-size: .12rem;
+            color: #999;
+            margin: .04rem 0 .16rem; }
+          .allshows .allshows-list ul li .showdetail .price {
+            display: block;
+            color: #FF2661;
+            font-size: 0.18rem; }

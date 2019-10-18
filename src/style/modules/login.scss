@@ -1,0 +1,67 @@
+.loginWrap{
+    width: 100%;
+    height: auto;
+    h2{
+        height: .26rem;
+        font-size: .22rem;
+        text-align: center;
+        font-weight: normal;
+        margin-top: .5rem;
+    }
+    .pwdlogin{
+        height: 2.14rem;
+        display: flex;
+        flex-direction: column;
+        margin-top: .25rem;
+        input{
+            height: .46rem;
+            width: 80%;
+            align-self: center;
+            border: none;
+            border-bottom: solid 1px #ccc;
+        }
+        .loginbtn{
+            margin-top: .32rem;
+            height: .45rem;
+            width: 80%;
+            align-self: center;
+            background: #ff2661;
+            color: #fff;
+            text-align: center;
+            font-size: .17rem;
+            line-height: .45rem;
+        }
+        .logintip{
+            height: .35rem;
+            width: 80%;
+            align-self: center;
+            display: flex;
+            justify-content: space-between;
+            margin: .08rem .3rem;
+            
+            .xieyi{
+                width: 50%;
+                height: 100%;
+                font-size: .12rem;
+                line-height: .35rem;
+                display: flex;
+                align-items: center;
+                .checkbox{
+                    width: .12rem;
+                    height: .12rem;
+                    margin-right: .1rem;
+                    background: #4b8feb;
+                    &.active2{
+                        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAB/0lEQVRIS+2WS2gTURSGvzuPjJlgsC60G19F6kJQiFakuFFsJNCNIoiKuBNxY0EKduFGKAUXiggqIi6FLizUB1JoF+omiAgKSlGqYFVE0dbIZPKYh9zBVsZkmkAyO2d5mfN/95z733OuADh0o9Ctet6I77MXSMu1Fr6CEEy6ijI0eiL9RkhxxfXyQEcLovVC5zxV2SmOXJ+/4/scaLN4ICcEY+LwtfmfbShL1P4KEuDHsfsFzf+Axep2mIIzOZOKA+fHrcX1tpRodVphqD/FqrTCzFeHc2NtBKxdqXC2P8UKU+HtF4cLD4tY5b++aSmD7k6VwVyKlCF4OVvl0kSRshP2ZAhgJkCy7Upj425dozGwz8TQBPmZClenbByvNi4EuHx0OQkNhu9afJyr8/ef+N6NOid3J9FUwdTrMreelPAjblMIMJBNsqMrQcH2GL5nMfujFtK3Wef4riSKEIw/LzH6tLxkuiGAphCknVmn14Xszxgc7DECwdv5Eg9eNK5lzSEHkKxJZr3OL5nJfYsP3z2O9S4jt8XA9XxuPrZ5NF1tfFCy4dXrRRJyOmuyTUJKHtOfXXq6dKquz5XJIs/e/2OVJVCRNlUlpM9k+wY9CLcrPhcnLF59cpvaeVPNTkJO7UmyqVMLxN99i3ZWFLWli9ZMKvEPnNhHZuxDP+5ny2+geenbF+XtSQAAAABJRU5ErkJggg==) no-repeat center;
+                        background-size: cover;
+                    }
+                }
+            }
+            .mobilelogin{
+                line-height: .35rem;
+                font-size: .12rem;
+
+            }
+        }
+    }
+}

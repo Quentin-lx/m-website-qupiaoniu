@@ -1,0 +1,28 @@
+<div class="allshows">
+    <nav class="showskinds">
+        <ul>
+            <li class="active2">全部分类</li>
+            <li>演唱会</li>
+            <li>话剧歌剧</li>
+            <li>休闲展览</li>
+            <li>体育赛事</li>
+            <li>吃喝玩乐</li>
+            <li>音乐会</li>
+            <li>儿童亲子</li>
+            <li>舞蹈芭蕾</li>
+            <li>戏曲综艺</li>
+        </ul>
+    </nav>
+    <div class="sort-ways">
+        <ul> 
+            <li>综合排序</li>
+            <li>全部时间</li>
+            <li>在线选座</li>
+        </ul>
+    </div>
+    <div class="allshows-list">
+        <ul>
+            
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+#root {
+  height: 100%;
+  position: relative;
+  transition: all 0.2s ease-in-out; }
+
+@font-face {
+  font-family: 'iconf';
+  src: url("/assets/iconfont/iconfont.woff") format("woff"), url("/assets/iconfont/iconfont.ttf") format("truetype"); }
+
+.yo-ico {
+  font-family: iconf !important;
+  font-size: 28px;
+  color: #fff; }

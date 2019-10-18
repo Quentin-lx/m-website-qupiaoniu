@@ -1,0 +1,13 @@
+{{each list}}
+<li>
+    <div class="postershow">
+        <img src={{$value.recommendContent.poster}} alt="">
+    </div>
+    <div class="showdetail">
+        <h3 class="showname">{{$value.recommendContent.properName}}</h3>
+        <span class="time-place">{{$value.recommendContent.timeRange}} | {{$value.recommendContent.venueName}}</span>
+        <i class="comment">评分&nbsp;{{$value.recommendContent.rank}}</i>
+        <em class="price">￥{{$value.recommendContent.lowPrice}}</em>
+    </div>
+</li>
+{{/each}}

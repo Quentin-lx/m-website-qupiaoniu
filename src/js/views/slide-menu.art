@@ -1,0 +1,15 @@
+<div class="slideWrap">
+    <div class="login-register">
+        <a data-to="login">登录 / LOGIN</a>
+        <a>注册 / REGISTER</a>
+    </div>
+    <ul class="nav-menu">
+        <li data-to="position" class="active"><a><i></i><span>首页/HOME</span></a></li>
+        <li data-to="member"><a><i></i><span>会员/VIP</span></a></li>
+        <li data-to="shows"><a ><i></i><span>演出/SHOW</span></a></li>
+        <li><a href=""><i></i><span>电影/MOVIE</span></a></li>
+        <li><a href=""><i></i><span>验票/CHECKING</span></a></li>
+        <li><a href=""><i></i><span>客服/ONLINE SERVICE</span></a><span class="tip">工作日9:00~20:00 周末9:30~18:30</span></li>
+
+    </ul>
+</div>

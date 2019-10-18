@@ -1,0 +1,256 @@
+.memberWrap{
+    width: 100%;
+    height: auto;
+    background: #f6f7f9;
+    .person-info{
+        width: 100%;
+        height: 1.72rem;
+        background: linear-gradient(270deg, #ff5aa5 0%, #ff2661 100%);
+        position: relative;
+        display: flex;
+        
+        .custom-avatar{
+            left: 5%;
+            top: 20%;
+            position: absolute;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: url(https://static.piaoniu.com/m/static/img/defaultAvatar.99f8eed.png) no-repeat center;
+            background-size: cover;
+            z-index: 3;
+        }
+        .personCenter{
+            position: absolute;
+            width: 21vw;
+            height: .32rem;
+            background-color: rgba(0, 0, 0, 0.13);
+            text-align: center;
+            color: #fff;
+            font-size: .12rem;
+            line-height: .32rem;
+            border-radius: 10vw 0 0 10vw;
+            right: 0;
+            top: 25%;
+        }
+        .logintip{
+            position: absolute;
+            left: 25%;
+            top: 20%;
+            color: #fff;
+            font-size: .18rem;
+            
+        }
+        .counts{
+            width: 100%;
+            height: .49rem;
+            align-self: flex-end;
+            display: flex;
+            justify-content: space-between;
+            li{
+                width: 25%;
+                height: 100%;
+                span{
+                    width: 100%;
+                    height: .24rem;
+                    display: block;
+                    text-align: center;
+                    line-height: .20rem;
+                    color: #fff;
+                    font-size: .12rem;
+                }
+                .num{
+                    font-size: 15px;
+                    line-height: .3rem;
+                }
+            }
+        }
+    }
+    .trade-info{
+        width: 100%;
+        height: 1.15rem;
+        background: #fff;
+        margin-bottom: .1rem;
+        .mytrade{
+            height: .45rem;
+            display: flex;
+            justify-content: space-between;
+            h2{
+                height: 100%;
+                line-height: .45rem;
+                color: #262626;
+                font-size: .16rem;
+                margin-left: .2rem;
+                font-weight: normal;
+            }
+            .alltrade{
+                height: 100%;
+                line-height: .45rem;
+                color: #999;
+                font-size: .14rem;
+            }
+        }
+        .nowtrade{
+            width: 100%;
+            height: .7rem;
+            display: flex;
+            justify-content: space-between;
+            .nopay,.nosend,.noreceive{
+                width: 33.3%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                img{
+                    width: .22rem;
+                    height: .22rem;
+                }
+                span{
+                    font-size: .12rem;
+                    color: #666666;
+                }
+            }
+            
+        }
+    }
+    .discount{
+        height: .7rem;
+        background: #fff;
+        display: flex;
+        margin-bottom: .1rem;
+        .discount-coupon{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            span{
+                display: block;
+                text-align: center;
+            }
+            .num1{
+                font-size: .16rem;
+                color: #ff2661;
+            }
+            .coupon{
+                font-size: .12rem;
+                color: #666;
+            }
+        }
+        .gift-card{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            span{
+                display: block;
+                text-align: center;
+            }
+            .num2{
+                font-size: .16rem;
+                color: #ff2661;
+            }
+            .card{
+                font-size: .12rem;
+                color: #666;
+            }
+        }
+    }
+    .benefit-info{
+        height: 1.2rem;
+        background: #fff;
+        margin-bottom: .1rem;
+        h2{
+            height: .4rem;
+            line-height: .4rem;
+            color: #262626;
+            font-size: .16rem;
+            margin-left: .2rem;
+            font-weight: normal;
+        }
+        .benefit-model{
+            height: .8rem;
+            display: flex;
+            align-items: center;
+            .invite-friend{
+                width: 50%;
+                height: .48rem;
+                display: flex;
+                margin-left: .2rem;
+                img{
+                    width: .48rem;
+                    height: .48rem;
+                }
+                .invite-text{
+                    width: 50%;
+                    height: .48rem;
+                    margin-left: .1rem;
+                    span{
+                        display: block;
+                    }
+                    .title{
+                        color: #262626;
+                        font-size: .14rem;
+                    }
+                    .text{
+                        color: #999;
+                        font-size: .12rem;
+                        
+                    }
+                }
+            }
+            .club{
+                width: 50%;
+                height: .48rem;
+                display: flex;
+                margin-left: .2rem;
+                img{
+                    width: .48rem;
+                    height: .48rem;
+                }
+                .club-text{
+                    width: 50%;
+                    height: .48rem;
+                    margin-left: .1rem;
+                    span{
+                        display: block;
+                    }
+                    .title{
+                        color: #262626;
+                        font-size: .14rem;
+                    }
+                    .text{
+                        color: #999;
+                        font-size: .12rem;
+                        
+                    }
+                }
+            }
+        }
+
+    }
+    .other-func{
+        height: 1.32rem;
+        background: #fff;
+        li{
+            height: .44rem;
+            display: flex;
+            justify-content: space-between;
+            span{
+                font-size: .14rem;
+                display: block;
+                height: .44rem;
+                line-height: .44rem;
+            }
+            .func1,.func2,.func3{
+                margin-left: .2rem;
+            }
+            span:nth-last-of-type(1){
+                margin-right: .2rem;
+                color: #aaa;
+            }
+        }
+    }
+}

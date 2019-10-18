@@ -1,0 +1,40 @@
+<div class="index">
+    <header>
+        <div id="areaTitle">
+            <div class="select"><span class="yo-ico">&#xe605;</span></div>
+            <h1><span></span></h1>
+            <div class="search"><span class="yo-ico">&#xf00d9;</span></div>
+        </div>
+        
+        
+    </header>
+    <main>
+        <div id="mainwrap">
+            <!-- <div class="head">
+                <img src="/assets/images/arrow.png" />
+                <b>下拉刷新...</b>
+            </div> -->
+            
+                
+            <div id="choiceTheater">
+        
+            </div>
+            
+            
+            <div id="choiceShow">
+                
+            </div>
+            <div class="foot">
+                <img src="/assets/images/arrow.png"/>
+                <b>上拉加载更多...</b>
+            </div>
+        </div>
+        
+    </main>
+    <footer>
+
+    </footer>
+</div>
+<div class="slide-menu">
+
+</div>

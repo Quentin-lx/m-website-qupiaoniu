@@ -1,0 +1,100 @@
+<div class="theater">
+    <div id="areaChoice">
+        <div class="show">
+            <span></span>
+            <h2>演出/Show</h2>
+        </div>
+        <div class="movie">
+            <span></span>
+            <h2>电影/Movie</h2>
+        </div>
+    </div>
+    
+    <div id="banner">
+        <div class="swiper-container index-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="#"><img src="https://imgcdn.qupiaowang.com/FocusMapPic/20190904/20190904152542738_F6F5692AA9154FBAB5A4824885488CE8_-1888417996.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="#"><img src="https://imgcdn.qupiaowang.com/FocusMapPic/20190920/20190920112400283_8D2BA20B5D954C41A2D73BAFD938D63C_-423308442.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="#"><img src="https://imgcdn.qupiaowang.com/FocusMapPic/20190929/20190929171235368_887E481AAAC149599DFA60831EF94033_-462029854.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="#"><img src="https://imgcdn.qupiaowang.com/FocusMapPic/20190820/20190820101037816_C54A59C9235441FAB5B5FB4813A14300_-1480152293.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="#"><img src="https://imgcdn.qupiaowang.com/FocusMapPic/20190930/20190930100654423_78813F2D8D554375AE9615717F4C70F0_1525206361.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="#"><img src="https://imgcdn.qupiaowang.com/FocusMapPic/20190701/20190701150523881_3C46F2E1CACF4A6F84EB3E7986871172_-2071538654.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="#"><img src="https://imgcdn.qupiaowang.com/FocusMapPic/20190924/20190924165624164_A8859C13576042A084A880B9DB7DAF73_-799224246.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="#"><img src="https://imgcdn.qupiaowang.com/FocusMapPic/20190920/20190920100910359_D6F7761AA07442A5BE7B08E16A858550_-30930013.jpg" alt=""></a></div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-scrollbar"></div>
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#"><span><img src="http://assets.piaoniu.com/home/icons/category-live-large.png" alt=""></span><span>演唱会</span></a></li>
+            <li><a href="#"><span><img src="http://assets.piaoniu.com/home/icons/category-concert-large.png" alt=""></span><span>音乐会</span></a></li>
+            <li><a href="#"><span><img src="http://assets.piaoniu.com/home/icons/category-drama-large.png" alt=""></span><span>歌剧话剧</span></a></li>
+            <li><a href="#"><span><img src="http://assets.piaoniu.com/home/icons/category-sports-large.png" alt=""></span><span>体育赛事</span></a></li>
+            <li><a href="#"><span><img src="http://assets.piaoniu.com/home/icons/category-exibition-large.png" alt=""></span><span>限量周边</span></a></li>
+            <li><a href="#"><span><img src="http://assets.piaoniu.com/home/icons/category-dance-small.png" alt=""></span><span>戏曲舞蹈</span></a></li>
+            <li><a href="#"><span><img src="http://assets.piaoniu.com/home/icons/category-child-small-v2.png" alt=""></span><span>亲子儿童</span></a></li>
+            <li><a href="#"><span><img src="http://assets.piaoniu.com/home/icons/category-xiqu-small-v2.png" alt=""></span><span>曲艺杂谈</span></a></li>
+            <li><a href="#"><span><img src="http://assets.piaoniu.com/home/icons/category-travel-small.png" alt=""></span><span>休闲度假</span></a></li>
+            <li><a href="#"><span><img src="http://assets.piaoniu.com/home/icons/category-play-small-v2.png" alt=""></span><span>全部类型</span></a></li>
+        </ul>
+    </nav>
+    <div class="hotshow">
+        <div class="title">
+            <a href="#">近期热门</a>
+            <a href="#">更多 > </a>
+        </div>
+         <div class="showsList">
+            <div class="detail">
+                <div class="poster"><a href="#"><img src="https://img.piaoniu.com/poster/7797bd2fbc9dbef054d01b6eea8ed83dadb0f200.jpg?imageView2/2/w/220/h/164/format/jpg/q/60" alt=""><span>威海 黑谷之夜 演唱会</span><i>￥141</i></a></div>
+                <div class="poster"><a href="#"><img src="https://img.piaoniu.com/poster/146e2514d330d92830d6a93ce462e44ae82e2b40.jpg?imageView2/2/w/220/h/164/format/jpg/q/60" alt=""><span>Color Run 北京站 上午场</span><i>￥208</i></a></div>
+                <div class="poster"><a href="#"><img src="https://img.piaoniu.com/poster/b6d761f06bf8b565187c4ceba982ae3bc962163c.jpg?imageView2/2/w/220/h/164/format/jpg/q/60" alt=""><span>央花经典大戏《如梦之梦》</span><i>￥884</i></a></div>
+                <div class="poster"><a href="#"><img src="https://img.piaoniu.com/poster/9c21c4c2326e5b24839c21f32f6c7110b10cef95.jpg?imageView2/2/w/220/h/164/format/jpg/q/60" alt=""><span>中超联赛第26场北京国安VS上海上港</span><i>￥215</i></a></div>
+                <div class="poster"><a href="#"><img src="https://img.piaoniu.com/poster/83c2661b2ad267d4cf17e04f45408790958b4e9d.jpg?imageView2/2/w/220/h/164/format/jpg/q/60" alt=""><span>姜育恒2019北京演唱会</span><i>￥171</i></a></div>
+                <div class="poster"><a href="#"><img src="https://img.piaoniu.com/poster/4ff699f749a914414be618726095ba5b4cfbe63c.jpg?imageView2/2/w/220/h/164/format/jpg/q/60" alt=""><span>崂山之夜群星演唱会</span><i>￥411</i></a></div>
+                <div class="poster"><a href="#"><img src="https://img.piaoniu.com/poster/7196fde15de975a0b64fa5ff0d77322d6a085c79.jpg?imageView2/2/w/220/h/164/format/jpg/q/60" alt=""><span>明星版话剧《雷雨》</span><i>￥209</i></a></div>
+                <div class="poster"><a href="#"><img src="https://img.piaoniu.com/poster/1bedc1790d20a51f1540d31e39851072915d3753.jpg?imageView2/2/w/220/h/164/format/jpg/q/60" alt=""><span>潘玮柏 巡演北京站</span><i>￥327</i></a></div>
+                <div class="poster"><a href="#"><img src="https://img.piaoniu.com/poster/905c3b9fa789233567dd06c74145be10ce3fa81d.jpg?imageView2/2/w/220/h/164/format/jpg/q/60" alt=""><span>2022世界杯亚洲预选赛中国国足VS关岛</span><i>￥75</i></a></div>
+                <div class="poster"><a href="#"><img src="https://img.piaoniu.com/poster/a9431c5fc465dc6c98ab2e416fd0168e549acdd6.jpg?imageView2/2/w/220/h/164/format/jpg/q/60" alt=""><span>明星版《暗恋桃花源》</span><i>￥914</i></a></div>
+            </div>
+        </div>
+       
+    </div>
+    <div class="discountArea">
+        <div class="title">
+            <a href="#">折扣专区</a>
+            <a href="#">更多 > </a>
+        </div>
+        <div class="showsList">
+            <div class="detail">
+                    <div class="poster"><a href="#"><img src="https://img.piaoniu.com/externalPoster/748aaff5248583d08066528c1bcb91299beec59d.jpg?imageView2/2/w/220/h/164/format/jpg/q/60" alt=""><span>北京欢乐谷</span><i>￥26.9<sub>￥138</sub></i></a></div>
+                    <div class="poster"><a href="#"><img src="https://img.piaoniu.com/poster/aef53d8c842c8d2befb974608c88c23d6669bc5f.jpg?imageView2/2/w/220/h/164/format/jpg/q/60" alt=""><span>纪晓岚故居</span><i>￥20<sub>￥30</sub></i></a></div>
+                    <div class="poster"><a href="#"><img src="https://img.piaoniu.com/poster/76b5557c03ab59e33b6572d63cf0ee6656fdc991.jpg?imageView2/2/w/220/h/164/format/jpg/q/60" alt=""><span>梨园剧场京剧</span><i>￥45<sub>￥280</sub></i></a></div>
+                    <div class="poster"><a href="#"><img src="https://img.piaoniu.com/poster/b6ca5a6e1c85880642e5212e42ee7974a3741717.jpg?imageView2/2/w/220/h/164/format/jpg/q/60" alt=""><span>星光浪漫互动音乐剧场《月光摇篮曲》</span><i>￥80<sub>￥160</sub></i></a></div>
+                    <div class="poster"><a href="#"><img src="https://img.piaoniu.com/poster/933bc9bfd8ad4d5023e6d341d792de30a09584d7.jpg?imageView2/2/w/220/h/164/format/jpg/q/60" alt=""><span>互动儿童剧《爱丽丝梦游仙境》</span><i>￥45<sub>￥80</sub></i></a></div>
+                    <div class="poster"><a href="#"><img src="https://img.piaoniu.com/poster/d45a9c0b3a07471d1636598c11807e4b61c26519.jpg?imageView2/2/w/220/h/164/format/jpg/q/60" alt=""><span>白雪公主</span><i>￥50<sub>￥180</sub></i></a></div>
+                    <div class="poster"><a href="#"><img src="https://img.piaoniu.com/poster/4fd99a0bb7a903c815cf2592e34fca711c78ae86.jpg?imageView2/2/w/220/h/164/format/jpg/q/60" alt=""><span>天地宝藏</span><i>￥126<sub>￥3800</sub></i></a></div>
+                    <div class="poster"><a href="#"><img src="https://img.piaoniu.com/poster/ccca6479b257128309e8364ad95d611121119215.jpg?imageView2/2/w/220/h/164/format/jpg/q/60" alt=""><span>绿野仙踪</span><i>￥61<sub>￥380</sub></i></a></div>
+                    <div class="poster"><a href="#"><img src="https://img.piaoniu.com/poster/c81668d9c85908d85a688a1982c4e0ea1fa7ece7.jpg?imageView2/2/w/220/h/164/format/jpg/q/60" alt=""><span>纪念邓丽君经典金曲圣诞音乐会</span><i>￥105<sub>￥880</sub></i></a></div>
+
+
+            </div>
+        </div>
+    
+    </div>
+    <div class="guessUrlike">
+        <div class="title">
+            <h2>猜你喜欢</h2>
+        </div>
+        <ul class="showsRecommend">
+            
+        </ul>
+        
+    
+    </div>
+    
+</div>
+

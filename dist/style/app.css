@@ -1,0 +1,1757 @@
+@charset "UTF-8";
+/**
+ * Yo框架全局base定义
+ * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方
+ * lib中map使用“_”开头，本文件中不使用"_"
+ * base ⇌ extra
+ */
+/**
+ * Yo框架全局base定义
+ * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方
+ * 本文件中map使用"_"开头，extra中不使用"_"
+ * base ⇌ extra
+ */
+/**
+ * 合并base和extra中的同类base map
+ * 用以解决业务方升级Yo时需比base和extra的一致性
+ * 当extra为空时，base map将以base文件里的定义作为默认值
+ * 当extra不为空时，base map使用extra文件里的定义
+ */
+/**
+ * Yo框架全局Variables
+ * Yo基础变量map，如果不想定义某属性，将其value设置为null；
+ * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方
+ * variables中map使用“_”开头，本文件中不使用"_"
+ * variables ⇌ config
+ */
+/**
+ * Yo框架全局Variables
+ * Yo基础变量map，如果不想定义某属性，将其value设置为null
+ * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方
+ * 本文件中map使用"_"开头，config中不使用"_"
+ * variables ⇌ config
+ */
+/**
+ * 合并variables和config中的同类map
+ * 用以解决业务方升级Yo时需比config和variables的一致性
+ * 当config为空时，使用variables中的map作为默认值
+ * 当config不为空时，使用config中的定义
+ */
+/**
+ * Yo框架自定义全局函数
+ * 扩充Sass默认函数库，用以增强语法
+ */
+/**
+ * @module List扩展函数
+ * @description 返回SassList中的第一项
+ * @function first
+ * @version 2.1.0
+ * @param {String} $list 指定一个Sass List <2.1.0>
+ */
+/**
+ * @module List扩展函数
+ * @description 返回SassList中的最后一项
+ * @function last
+ * @version 2.1.0
+ * @param {String} $list 指定一个Sass List <2.1.0>
+ */
+/**
+ * @module List扩展函数
+ * @description 返回SassList中的倒数第几项
+ * @function nth-last
+ * @version 2.1.0
+ * @param {String} $list 指定一个Sass List <2.1.0>
+ * @param {Integer} $index 指定需要返回的值在list中的倒数位置 <2.1.0>
+ */
+/**
+ * @module List扩展函数
+ * @description 移除SassList中的某个项目并返回新的List
+ * @function remove
+ * @version 2.1.0
+ * @param {String} $list 指定一个Sass List <2.1.0>
+ * @param {String} $value 指定需要被删除的值 <2.1.0>
+ */
+/**
+ * @module List扩展函数
+ * @description 截取SassList中的某个部分并返回新的List
+ * @function slice
+ * @version 2.1.0
+ * @param {String} $list 指定一个Sass List <2.1.0>
+ * @param {Integer} $start 指定需要截取的开始下标 <2.1.0>
+ * @param {Integer} $end 指定需要截取的结束下标（不包括end），当该值缺省时默认为末尾下标 <2.1.0>
+ */
+/**
+ * @module List扩展函数
+ * @description 从SassList中添加/删除项目，然后返回新的List。
+ * @function splice
+ * @version 2.1.0
+ * @param {String} $list 指定一个Sass List <2.1.0>
+ * @param {Integer} $index 指定需要移除的开始下标 <2.1.0>
+ * @param {Integer} $count 指定需要移除的数量，不可以为负值，0表示不移除 <2.1.0>
+ * @param {String} $values 指定需要添加的新值（可以是多个），如果该值缺省，则表示只移除不添加新值 <2.1.0>
+ */
+/**
+ * Yo框架全局基础方法
+ * 包括响应式方案，CSS3兼容性方案，厂商前缀方案，iconfont方案，flex布局等全局方法
+ */
+/**
+ * @module 常用方法
+ * @description 给需要的属性加厂家前缀
+ * @method prefix
+ * @version 1.0.0
+ * @param {String} $property 指定属性 <1.0.0>
+ * @param {String} $value 指定属性值 <1.0.0>
+ * @skip
+ */
+/**
+ * @module 常用方法
+ * @description 定义字体图标
+ * @method _iconfont
+ * @version 1.0.0
+ * @skip
+ */
+/**
+ * @module 常用方法
+ * @description 四则运算(系统要求：iOS6.0+,Android4.4+)
+ * @method calc
+ * @version 1.7.0
+ * @param {String} $property 指定需要进行计算的CSS属性 <1.7.0>
+ * @param {String} $value 与原生CSS语法一致，区别在于需要使用引号包裹表达式 <1.7.0>
+ * @example
+ * .calc {
+ *     @include calc(width, "100% - 100px");
+ * }
+ *
+ * <div class="calc">四则运算</div>
+ */
+/**
+ * @module 常用方法
+ * @description 定义响应式方案
+ * @method responsive
+ * @version 1.0.0
+ * @param {String} $media 指定媒体查询条件，取值为`config`文件map `media-types`中的值 <1.0.0>
+ */
+/**
+ * @module 常用方法
+ * @description 清除浮动方案
+ * @method clearfix
+ * @version 1.0.0
+ * @param {String} $type 指定清除浮动的方式，包括：pseudo-element | bfc，默认值：pseudo-element <1.8.5>
+ */
+/**
+ * @module 常用方法
+ * @description 清除行内级元素间间隙方案
+ * @method clearspace
+ * @version 3.0.3
+ * @param {Length} $font-size 指定子元素字号，默认值：.14rem <3.0.3>
+ * @example
+ * .demo {
+ *     @include clearspace;
+ * }
+ *
+ * <div class="demo">
+ *      <span class="item">1</span>
+ *      <span class="item">2</span>
+ *      <span class="item">3</span>
+ * </div>
+ */
+/**
+ * @module 常用方法
+ * @description 描述元素内容在横、纵方向上的对齐方式，默认为水平垂直居中对齐
+ * @method align
+ * @version 2.0.0
+ * @param {String} $flexbox 元素布局方式，可选值：flex | inline-flex，默认值：flex <2.0.0>
+ * @param {Keyword} $justify-content 元素内容的水平对齐方式，取值与`justify-content`属性一致，默认值：center <2.0.0>
+ * @param {Keyword} $align-items 元素内容的垂直对齐方式，取值与`align-items`属性一致，默认值：center <2.0.0>
+ * @example
+ * .demo {
+ *     @include align;
+ * }
+ *
+ * <div class="demo">
+ *      <img alt="未知尺寸图片居中" />
+ * </div>
+ */
+/**
+ * @module 常用方法
+ * @description 定义是否有滚动条
+ * @method overflow
+ * @version 1.0.0
+ * @param {String} $overflow 取值与最新原生语法一致，默认值：auto <1.0.0>
+ */
+/**
+ * @module 常用方法
+ * @description 生成全屏方法
+ * @method fullscreen
+ * @version 1.7.0
+ * @param {Integer} $z-index 指定层叠级别 <1.7.0>
+ * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute <1.8.5>
+ */
+/**
+ * @module 用户界面
+ * @description 定义使用何种滤镜
+ * @method filter
+ * @version 1.7.0
+ * @param {String} $filter 取值与`filter`属性一致 <1.7.0>
+ */
+/**
+ * @module 用户界面
+ * @description 定义UA默认外观
+ * @method appearance
+ * @version 1.0.0
+ * @param {String} $appearance 取值与`appearance`属性一致，默认值：none <1.0.0>
+ */
+/**
+ * @module 用户界面
+ * @description 定义如何选中内容
+ * @method user-select
+ * @version 1.0.0
+ * @param {String} $user-select 取值与`user-select`属性一致，默认值：none <1.0.0>
+ */
+/**
+ * @module 用户界面
+ * @description 定义盒模型
+ * @method box-sizing
+ * @version 1.0.0
+ * @param {String} $box-sizing 指定盒模型类型，取值与`box-sizing`属性一致，默认值：border-box <1.0.0>
+ */
+/**
+ * @module 背景与边框
+ * @description 定义渐变色值
+ * @method gradient
+ * @version 1.0.0
+ * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial <1.0.0>
+ * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle <2.0.0>
+ * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 <1.0.0>
+ */
+/**
+ * @module 背景与边框
+ * @description 定义背景图像缩放（AndroidBrowser2.3.*还需要厂商前缀）
+ * @method background-size
+ * @version 1.4.0
+ * @param {Keywords | Length} $background-size 指定背景图缩放值，取值与`background-size`属性一致 <1.4.0>
+ */
+/**
+ * @module 背景与边框
+ * @description 定义背景裁减（AndroidBrowser2.3.*还需要厂商前缀）
+ * @method background-clip
+ * @version 1.6.0
+ * @param {Keywords} $background-clip 指定背景图缩放值，取值与`background-clip`属性一致 <1.6.0>
+ */
+/**
+ * @module 背景与边框
+ * @description 定义背景显示区域（AndroidBrowser2.3.*还需要厂商前缀）
+ * @method background-origin
+ * @version 1.6.0
+ * @param {Keywords} $background-origin 指定背景图`background-position`属性计算相对的参考点，取值与`background-origin`属性一致 <1.6.0>
+ */
+/**
+ * @module 背景与边框
+ * @description 为元素添加边框（包括1px边框）
+ * @method border
+ * @version 2.0.0
+ * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 <2.0.0>
+ * @param {String} $border-color 指定边框颜色 <2.0.0>
+ * @param {String} $border-style 指定边框样式 <2.0.0>
+ * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>
+ */
+/**
+ * @module 背景与边框
+ * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况
+ * @method border-radius
+ * @version 1.6.0
+ * @param {Length} $border-radius 指定元素的圆角半径，取值与`border-radius`属性一致 <1.6.0>
+ */
+/**
+ * @module Transform
+ * @description 定义简单变换
+ * @method transform
+ * @version 1.0.0
+ * @param {String} $transform 取值范围与`transform`属性一致 <1.0.0>
+ */
+/**
+ * @module Transform
+ * @description 定义变换原点
+ * @method transform-origin
+ * @version 1.0.0
+ * @param {Length | Percentage | Keywords} $transform-origin 取值范围与`transform-origin`属性一致 <1.0.0>
+ */
+/**
+ * @module Transform
+ * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化
+ * @method transform-style
+ * @version 2.0.0
+ * @param {String} $transform-style 取值范围与`transform-style`属性一致 <2.0.0>
+ */
+/**
+ * @module Transform
+ * @description 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果。「z>0」的三维元素比正常大，而「z<0」时则比正常小，大小程度由该属性的值决定。
+ * @method perspective
+ * @version 2.0.0
+ * @param {none | Length} $perspective 取值范围与`perspective`属性一致 <2.0.0>
+ */
+/**
+ * @module Transform
+ * @description 指定透视点的位置
+ * @method perspective-origin
+ * @version 2.0.0
+ * @param {Length | Percentage | Keywords} $perspective-origin 取值范围与`perspective-origin`属性一致 <2.0.0>
+ */
+/**
+ * @module Transform
+ * @description 指定元素背面面向用户时是否可见
+ * @method backface-visibility
+ * @version 2.0.0
+ * @param {Keywords} $backface-visibility 取值范围与`backface-visibility`属性一致 <2.0.0>
+ */
+/**
+ * @module Animation
+ * @description 定义动画
+ * @method animation
+ * @version 1.0.0
+ * @param {String} $animation 取值与原生语法一致 <1.0.0>
+ */
+/**
+ * @module Animation
+ * @description 指定需要引用的动画名称
+ * @method animation-name
+ * @version 3.0.0
+ * @param {String} $animation-name 取值与原生语法一致 <3.0.0>
+ */
+/**
+ * @module Animation
+ * @description 指定动画运行一次所持续的时长
+ * @method animation-duration
+ * @version 3.0.0
+ * @param {String} $animation-duration 取值与原生语法一致 <3.0.0>
+ */
+/**
+ * @module Animation
+ * @description 指定动画运行方式
+ * @method animation-timing-function
+ * @version 3.0.0
+ * @param {String} $animation-timing-function 取值与原生语法一致 <3.0.0>
+ */
+/**
+ * @module Animation
+ * @description 指定动画延迟多久之后再开始
+ * @method animation-delay
+ * @version 3.0.0
+ * @param {String} $animation-delay 取值与原生语法一致 <3.0.0>
+ */
+/**
+ * @module Animation
+ * @description 指定动画循环几次
+ * @method animation-iteration-count
+ * @version 3.0.0
+ * @param {String} $animation-iteration-count 取值与原生语法一致 <3.0.0>
+ */
+/**
+ * @module Animation
+ * @description 指定动画的运动方向
+ * @method animation-direction
+ * @version 3.0.0
+ * @param {String} $animation-direction 取值与原生语法一致 <3.0.0>
+ */
+/**
+ * @module Animation
+ * @description 指定动画的运动状态
+ * @method animation-play-state
+ * @version 3.0.0
+ * @param {String} $animation-play-state 取值与原生语法一致 <3.0.0>
+ */
+/**
+ * @module Animation
+ * @description 指定动画时间之外的状态
+ * @method animation-fill-mode
+ * @version 3.0.0
+ * @param {String} $animation-fill-mode 取值与原生语法一致 <3.0.0>
+ */
+/**
+ * @module Transition
+ * @description 定义补间
+ * @method transition
+ * @version 1.0.0
+ * @param {String} $transition 取值与原生语法一致 <1.0.0>
+ */
+/**
+ * @module Flexbox
+ * @description 定义显示类型为伸缩盒
+ * @method flexbox
+ * @version 1.0.0
+ * @param {String} $flexbox 默认值：flex，可选值：flex | inline-flex <1.0.0>
+ */
+/**
+ * @module Flexbox
+ * @description 定义伸缩盒子元素如何分配空间
+ * @method flex
+ * @version 1.0.0
+ * @param {Number} $flex 取值与`flex`属性一致，默认值：1 <1.0.0>
+ * @param {String} $direction 默认值: row，可选值：row | column <1.5.0>
+ */
+/**
+ * @module Flexbox
+ * @description 定义伸缩盒子元素的排版顺序
+ * @method order
+ * @version 1.0.0
+ * @param {Integer} $order 取值与`order`属性一致，默认值：1 <1.0.0>
+ */
+/**
+ * @module Flexbox
+ * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(要求系统：iOS7.0+, Android4.4+)
+ * @method flex-flow
+ * @version 2.0.0
+ * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap <2.0.0>
+ */
+/**
+ * @module Flexbox
+ * @description 定义伸缩盒子元素的流动方向
+ * @method flex-direction
+ * @version 1.0.0
+ * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row <1.0.0>
+ */
+/**
+ * @module Flexbox
+ * @description 定义弹性盒子元素溢出后排版(要求系统：iOS7.0+, Android4.4+)
+ * @method flex-wrap
+ * @version 1.0.0
+ * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap <1.0.0>
+ */
+/**
+ * @module Flexbox
+ * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)
+ * @method justify-content
+ * @version 1.0.0
+ * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center <1.0.0>
+ */
+/**
+ * @module Flexbox
+ * @description 定义多行弹性容器侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)
+ * @method align-content
+ * @version 1.8.5
+ * @param {String} $align-content 取值与`align-content`属性一致，默认值：center <1.8.5>
+ */
+/**
+ * @module Flexbox
+ * @description 定义单行弹性容器侧轴对齐方式
+ * @method align-items
+ * @version 1.0.0
+ * @param {String} $align-items 取值与`align-items`属性一致，默认值：center <1.0.0>
+ */
+/**
+ * @module Flexbox
+ * @description 定义弹性容器中子元素自身的在侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)
+ * @method align-self
+ * @version 1.0.0
+ * @param {String} $align-self 取值与`align-self`属性一致，默认值：center <1.0.0>
+ */
+/**
+ * @module 形状
+ * @description 生成矩形方法
+ * @method rect
+ * @version 1.0.0
+ * @param {Length} $width 定义矩形的长度 <1.0.0>
+ * @param {Length} $height 定义矩形的高度 <1.0.0>
+ */
+/**
+ * @module 形状
+ * @description 生成正方形方法
+ * @method square
+ * @version 1.0.0
+ * @param {Length} $size 定义正方形的边长 <1.0.0>
+ */
+/**
+ * @module 形状
+ * @description 生成圆形方法
+ * @method circle
+ * @version 1.0.0
+ * @param {Length} $size 定义圆的半径长度 <1.0.0>
+ * @param {Length} $radius 定义圆的圆角半径长度 <1.0.0>
+ */
+/**
+ * @module 常用方法
+ * @description 在自适应宽度情况下，确保内容元素的宽高比固定，比如：实现随屏幕大小而变化的正方形。
+ * @method fixed-scale
+ * @version 3.0.10
+ * @param {Length} $width 默认值：100%。用以指定内容元素的初始宽度，由于尺寸需动态变化，不要使用固定单位 <3.0.10>
+ * @param {Length} $scale 默认值：1/1，即正方形。用以指定内容元素的宽度高比 <3.0.10>
+ */
+/**
+ * @module 文本
+ * @description 链接处理方法
+ * @method link
+ * @version 1.0.0
+ * @param {Color} $color 定义链接颜色 <1.0.0>
+ */
+/**
+ * @module 文本
+ * @description 文本碰到边界是否换行
+ * @method wrap
+ * @version 1.0.0
+ * @param {Boolean} $is-wrap 定义文本是否换行，默认值：true <2.0.0>
+ */
+/**
+ * @module 文本
+ * @description 单行文本溢出时显示省略号
+ * @method ellipsis
+ * @version 1.0.0
+ * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>
+ * @param {Integer} $line-clamp 定义需要显示的行数，默认值：1（即使用单行溢出的处理方案），需要注意的是本参数只支持webkit内核 <2.1.2>
+ */
+/**
+ * @module 文本
+ * @description 文字隐藏方案
+ * @method texthide
+ * @version 1.0.0
+ * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>
+ */
+/**
+ * Yo框架全局Reset
+ * Yo重置Mobile及高级浏览器上常见的差异
+ */
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+html,
+body {
+  overflow: hidden;
+  height: 100%; }
+
+::-webkit-scrollbar {
+  display: none; }
+
+html {
+  background-color: #eee;
+  color: #212121;
+  font-size: 100px;
+  -webkit-user-select: none;
+  user-select: none; }
+
+body {
+  margin: 0;
+  font-size: 0.14em;
+  line-height: 1.5;
+  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif; }
+
+ul,
+ol,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure,
+form,
+fieldset,
+legend,
+input,
+textarea,
+button,
+p,
+blockquote,
+th,
+td,
+pre,
+xmp {
+  margin: 0;
+  padding: 0; }
+
+input,
+textarea,
+button,
+select,
+pre,
+xmp,
+tt,
+code,
+kbd,
+samp {
+  line-height: inherit;
+  font-family: inherit; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small,
+big,
+input,
+textarea,
+button,
+select {
+  font-size: inherit; }
+
+address,
+cite,
+dfn,
+em,
+i,
+optgroup,
+var {
+  font-style: normal; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+  text-align: left; }
+
+ul,
+ol,
+menu {
+  list-style: none; }
+
+fieldset,
+img {
+  border: 0;
+  vertical-align: middle; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+audio,
+canvas,
+video {
+  display: inline-block; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "\0020"; }
+
+textarea,
+pre,
+xmp {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch; }
+
+textarea {
+  resize: vertical; }
+
+input,
+textarea,
+button,
+select,
+summary,
+a {
+  outline: 0 none; }
+
+input,
+textarea,
+button,
+select {
+  color: inherit; }
+  input:disabled,
+  textarea:disabled,
+  button:disabled,
+  select:disabled {
+    opacity: 1; }
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="file"]::-webkit-file-upload-button,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none; }
+
+::-webkit-details-marker {
+  display: none; }
+
+mark {
+  background-color: rgba(0, 0, 0, 0); }
+
+a,
+ins,
+s,
+u,
+del {
+  text-decoration: none; }
+
+a,
+img {
+  -webkit-touch-callout: none; }
+
+a {
+  color: #00afc7; }
+
+.g-clear::after,
+.g-mod::after {
+  display: block;
+  overflow: hidden;
+  clear: both;
+  height: 0;
+  content: "\0020"; }
+
+@font-face {
+  font-family: yofont;
+  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format("woff"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format("truetype"); }
+
+.yo-ico {
+  font-family: yofont !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: middle; }
+
+#root {
+  height: 100%;
+  position: relative;
+  transition: all 0.2s ease-in-out; }
+
+@font-face {
+  font-family: 'iconf';
+  src: url("/assets/iconfont/iconfont.woff") format("woff"), url("/assets/iconfont/iconfont.ttf") format("truetype"); }
+
+.yo-ico {
+  font-family: iconf !important;
+  font-size: 28px;
+  color: #fff; }
+
+.index {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+  .index header {
+    width: 100%;
+    height: auto; }
+    .index header #areaTitle {
+      width: 100%;
+      height: 50px;
+      background: #282828;
+      display: flex;
+      justify-content: space-between; }
+      .index header #areaTitle .select {
+        width: 32px;
+        margin: 0 10px;
+        height: 100%;
+        text-align: center;
+        line-height: 50px; }
+      .index header #areaTitle h1 {
+        height: 100%;
+        width: calc(100%-102px);
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .index header #areaTitle h1 span {
+          display: block;
+          width: 60px;
+          height: 33px;
+          background: url(https://staticdn.qupiaowang.com/m/template/images/css_sprites3.png) no-repeat;
+          background-size: 60px 1027px;
+          background-position: 0 -422px; }
+      .index header #areaTitle .search {
+        width: 50px;
+        height: 100%;
+        text-align: center;
+        line-height: 50px; }
+  .index main {
+    height: 617px;
+    width: 100%;
+    overflow-y: scroll;
+    background: #fff; }
+    .index main #mainwrap {
+      width: 100%;
+      height: auto; }
+      .index main #mainwrap #choiceTheater {
+        width: 100%;
+        height: auto;
+        position: relative; }
+      .index main #mainwrap .foot {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: .4rem; }
+        .index main #mainwrap .foot img {
+          width: .16rem;
+          height: .16rem;
+          transition: transform 150ms;
+          -webkit-transition: transform 150ms; }
+      .index main #mainwrap .head {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: .4rem; }
+        .index main #mainwrap .head img {
+          width: .16rem;
+          height: .16rem;
+          transition: transform 150ms;
+          -webkit-transition: transform 150ms; }
+      .index main #mainwrap .up {
+        transform: rotate(360deg) !important;
+        -webkit-transform: rotate(360deg) !important; }
+      .index main #mainwrap .down {
+        transform: rotate(180deg); }
+
+.slide-menu {
+  width: 80%;
+  height: 100%;
+  background: #202020;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  transform: translate3d(-100%, 0, 0);
+  transition: all 0.5s ease-in-out; }
+  .slide-menu .slideWrap {
+    width: 100%;
+    height: 100%; }
+    .slide-menu .slideWrap .login-register {
+      width: 100%;
+      height: 2.35rem;
+      display: flex;
+      flex-direction: column;
+      background: url(https://staticdn.qupiaowang.com/m/template/images/mascot1.png) no-repeat left bottom;
+      background-size: 30%; }
+      .slide-menu .slideWrap .login-register > a {
+        display: block;
+        width: 1.5rem;
+        text-align: center;
+        height: .35rem;
+        line-height: .35rem;
+        border-radius: 17px;
+        align-self: center;
+        font-size: 0.14rem; }
+      .slide-menu .slideWrap .login-register a:nth-of-type(1) {
+        margin-top: .4rem;
+        color: #fff;
+        background: #d5094e; }
+      .slide-menu .slideWrap .login-register a:nth-of-type(2) {
+        margin-top: 0.2rem;
+        color: #fff;
+        border: solid 2px #d5094e; }
+    .slide-menu .slideWrap .nav-menu {
+      width: 100%;
+      height: calc(100% - 2.35rem); }
+      .slide-menu .slideWrap .nav-menu > li {
+        width: 100%;
+        height: .58rem;
+        line-height: .58rem;
+        color: #fff;
+        font-size: .14rem; }
+        .slide-menu .slideWrap .nav-menu > li.active {
+          border-left: #d5094e solid 4px; }
+        .slide-menu .slideWrap .nav-menu > li a {
+          display: flex;
+          width: 100%;
+          height: 100%; }
+          .slide-menu .slideWrap .nav-menu > li a i {
+            display: block;
+            width: .6rem;
+            height: .21rem;
+            align-self: center;
+            margin: 0 .2rem; }
+          .slide-menu .slideWrap .nav-menu > li a > span {
+            display: block;
+            color: #fff; }
+      .slide-menu .slideWrap .nav-menu > li:nth-last-of-type(1) {
+        display: flex;
+        flex-direction: column;
+        height: .90rem; }
+        .slide-menu .slideWrap .nav-menu > li:nth-last-of-type(1) a {
+          width: 100%;
+          height: .58rem; }
+        .slide-menu .slideWrap .nav-menu > li:nth-last-of-type(1) .tip {
+          height: 30px;
+          width: 100%;
+          line-height: 30px;
+          text-align: center; }
+      .slide-menu .slideWrap .nav-menu li:nth-of-type(1) a i {
+        background: url(https://staticdn.qupiaowang.com/m/template/images/css_sprites3.png) no-repeat center;
+        background-position: 12px -120px;
+        background-size: cover; }
+      .slide-menu .slideWrap .nav-menu li:nth-of-type(2) a i {
+        background: url(https://staticdn.qupiaowang.com/m/template/images/css_sprites3.png) no-repeat center;
+        background-position: 12px -70px;
+        background-size: cover; }
+      .slide-menu .slideWrap .nav-menu li:nth-of-type(3) a i {
+        background: url(https://staticdn.qupiaowang.com/m/template/images/css_sprites3.png) no-repeat center;
+        background-position: 12px -175px;
+        background-size: cover; }
+      .slide-menu .slideWrap .nav-menu li:nth-of-type(4) a i {
+        background: url(https://staticdn.qupiaowang.com/m/template/images/css_sprites3.png) no-repeat center;
+        background-position: 12px -204px;
+        background-size: cover; }
+      .slide-menu .slideWrap .nav-menu li:nth-of-type(5) a i {
+        background: url(https://staticdn.qupiaowang.com/m/template/images/css_sprites3.png) no-repeat center;
+        background-position: 12px -20px;
+        background-size: cover; }
+      .slide-menu .slideWrap .nav-menu li:nth-of-type(6) a i {
+        background: url(https://staticdn.qupiaowang.com/m/template/images/css_sprites3.png) no-repeat center;
+        background-position: 12px -148px;
+        background-size: cover; }
+
+.active {
+  transition: all 0.2s ease-in-out; }
+
+.act {
+  transform: translate3d(0, 0, 0);
+  transition: all 0.2s ease-in-out; }
+
+.theater {
+  width: 100%;
+  height: 100%; }
+  .theater #areaChoice {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #343434;
+    font-size: 0.13rem; }
+    .theater #areaChoice .show {
+      width: 180px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #e5004f;
+      border-radius: 20px;
+      color: #fff; }
+      .theater #areaChoice .show span {
+        margin-right: 10px;
+        display: block;
+        height: 22px;
+        width: 25px;
+        background: url(https://staticdn.qupiaowang.com/m/template/images/css_sprites2.png) no-repeat;
+        background-position: -29px -2033px; }
+      .theater #areaChoice .show h2 {
+        line-height: 0.4rem;
+        width: 70px;
+        height: 100%; }
+    .theater #areaChoice .movie {
+      width: 180px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #242424;
+      border-radius: 20px;
+      color: #747474; }
+      .theater #areaChoice .movie span {
+        margin-right: 10px;
+        width: 25px;
+        height: 22px;
+        display: block;
+        background: url(https://staticdn.qupiaowang.com/m/template/images/css_sprites2.png) no-repeat;
+        background-position: -32px -2086px; }
+      .theater #areaChoice .movie h2 {
+        line-height: 0.4rem;
+        width: 70px;
+        height: 100%; }
+  .theater #banner {
+    width: 100%;
+    height: 35vw; }
+    .theater #banner .index-swiper {
+      width: 100%;
+      height: 35vw; }
+      .theater #banner .index-swiper .swiper-wrapper {
+        width: 100%;
+        height: 35vw; }
+        .theater #banner .index-swiper .swiper-wrapper .swiper-slide a {
+          display: block;
+          width: 100%;
+          height: 35vw; }
+          .theater #banner .index-swiper .swiper-wrapper .swiper-slide a img {
+            width: 100%;
+            height: 100%; }
+      .theater #banner .index-swiper .swiper-pagination {
+        height: 20px; }
+  .theater > nav {
+    width: 100%;
+    height: 154px;
+    box-sizing: border-box;
+    padding: 10px 0; }
+    .theater > nav ul {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-content: space-between; }
+      .theater > nav ul li {
+        width: 18%;
+        height: 58px; }
+        .theater > nav ul li a {
+          color: #444; }
+          .theater > nav ul li a span {
+            display: block;
+            text-align: center;
+            font-size: 13px; }
+          .theater > nav ul li a span:nth-of-type(1) {
+            margin-bottom: 5px; }
+          .theater > nav ul li a img {
+            width: 30px;
+            height: 30px; }
+  .theater .hotshow {
+    width: 100%;
+    height: 250px;
+    padding: 22px 0 8px; }
+    .theater .hotshow > .title {
+      width: 100%;
+      height: 37px;
+      box-sizing: border-box;
+      padding: 0 14px 16px; }
+      .theater .hotshow > .title a:nth-of-type(1) {
+        font-size: 18px;
+        color: #565656;
+        font-weight: bold;
+        float: left; }
+      .theater .hotshow > .title a:nth-of-type(2) {
+        float: right;
+        font-size: 14px;
+        color: #999; }
+    .theater .hotshow .showsList {
+      width: 100%;
+      height: 180px;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      padding-left: 14px; }
+      .theater .hotshow .showsList .detail {
+        width: 1100px;
+        height: 180px;
+        display: flex;
+        justify-content: space-around; }
+        .theater .hotshow .showsList .detail .poster {
+          width: 102px;
+          height: 180px; }
+          .theater .hotshow .showsList .detail .poster > a > img {
+            width: 102px;
+            height: 137px; }
+          .theater .hotshow .showsList .detail .poster > a > span {
+            display: block;
+            font-size: 14px;
+            color: #262626;
+            width: 102px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 7px 0 3px; }
+          .theater .hotshow .showsList .detail .poster > a i {
+            height: 12px;
+            line-height: 12px;
+            display: block;
+            color: #FF2661;
+            font-size: 12px; }
+  .theater .discountArea {
+    width: 100%;
+    height: 250px;
+    padding: 22px 0 8px; }
+    .theater .discountArea > .title {
+      width: 100%;
+      height: 37px;
+      box-sizing: border-box;
+      padding: 0 14px 16px; }
+      .theater .discountArea > .title a:nth-of-type(1) {
+        font-size: 18px;
+        color: #565656;
+        font-weight: bold;
+        float: left; }
+      .theater .discountArea > .title a:nth-of-type(2) {
+        float: right;
+        font-size: 14px;
+        color: #999; }
+    .theater .discountArea .showsList {
+      width: 100%;
+      height: 180px;
+      overflow-x: scroll;
+      padding-left: 14px; }
+      .theater .discountArea .showsList .detail {
+        width: 1000px;
+        height: 180px;
+        display: flex;
+        justify-content: space-around; }
+        .theater .discountArea .showsList .detail .poster {
+          width: 102px;
+          height: 180px; }
+          .theater .discountArea .showsList .detail .poster > a > img {
+            width: 102px;
+            height: 137px; }
+          .theater .discountArea .showsList .detail .poster > a > span {
+            display: block;
+            font-size: 14px;
+            color: #262626;
+            width: 102px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 7px 0 3px; }
+          .theater .discountArea .showsList .detail .poster > a i {
+            height: 12px;
+            line-height: 12px;
+            display: block;
+            color: #FF2661;
+            font-size: 12px; }
+            .theater .discountArea .showsList .detail .poster > a i sub {
+              line-height: 12px;
+              text-decoration: line-through;
+              color: #999; }
+  .theater .guessUrlike {
+    width: 100%;
+    padding-top: 20px; }
+    .theater .guessUrlike > .title {
+      width: 100%;
+      height: 37px;
+      box-sizing: border-box;
+      padding: 0 14px 16px;
+      font-size: 0.18rem;
+      color: #565656; }
+      .theater .guessUrlike > .title h2 {
+        font-weight: normal; }
+    .theater .guessUrlike .showsRecommend {
+      height: auto;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 .15rem; }
+      .theater .guessUrlike .showsRecommend li {
+        width: 100%;
+        height: 1.48rem;
+        display: flex;
+        justify-content: space-between; }
+        .theater .guessUrlike .showsRecommend li > .postershow {
+          width: 22%;
+          height: 1.48rem; }
+          .theater .guessUrlike .showsRecommend li > .postershow img {
+            padding-top: .15rem;
+            width: 100%;
+            height: 85%; }
+        .theater .guessUrlike .showsRecommend li .showdetail {
+          width: 70%;
+          height: 1.48rem;
+          padding-top: .15rem; }
+          .theater .guessUrlike .showsRecommend li .showdetail .showname {
+            font-size: 0.15rem;
+            color: #333;
+            font-weight: bold;
+            width: 2.49rem; }
+          .theater .guessUrlike .showsRecommend li .showdetail .time-place {
+            display: block;
+            font-size: 0.12rem;
+            color: #999;
+            margin-top: 0.09rem; }
+          .theater .guessUrlike .showsRecommend li .showdetail .comment {
+            display: block;
+            font-size: .12rem;
+            color: #999;
+            margin: .04rem 0 .16rem; }
+          .theater .guessUrlike .showsRecommend li .showdetail .price {
+            display: block;
+            color: #FF2661;
+            font-size: 0.18rem; }
+
+.allshows {
+  width: 100%;
+  height: 100%; }
+  .allshows > nav {
+    width: 100%;
+    height: .39rem;
+    overflow-x: scroll;
+    overflow-y: hidden; }
+    .allshows > nav > ul {
+      width: 800px;
+      height: 100%;
+      display: flex;
+      justify-content: space-around; }
+      .allshows > nav > ul > li {
+        height: 100%;
+        font-size: .14rem;
+        line-height: .39rem;
+        box-sizing: border-box; }
+        .allshows > nav > ul > li.active2 {
+          border-bottom: #ff2661 solid 2px;
+          color: #ff2661; }
+  .allshows .sort-ways {
+    width: 100%;
+    height: .35rem;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15); }
+    .allshows .sort-ways > ul {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-around; }
+      .allshows .sort-ways > ul > li {
+        height: 100%;
+        font-size: .14rem;
+        line-height: .35rem; }
+  .allshows .allshows-list {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 .15rem;
+    height: auto; }
+    .allshows .allshows-list ul {
+      width: 100%;
+      height: 100%; }
+      .allshows .allshows-list ul li {
+        width: 100%;
+        height: 1.48rem;
+        display: flex;
+        justify-content: space-between; }
+        .allshows .allshows-list ul li > .postershow {
+          width: 22%;
+          height: 1.48rem; }
+          .allshows .allshows-list ul li > .postershow img {
+            padding-top: .15rem;
+            width: 100%;
+            height: 85%; }
+        .allshows .allshows-list ul li .showdetail {
+          width: 70%;
+          height: 1.48rem;
+          padding-top: .15rem; }
+          .allshows .allshows-list ul li .showdetail .showname {
+            font-size: 0.15rem;
+            color: #333;
+            font-weight: bold;
+            width: 2.49rem; }
+          .allshows .allshows-list ul li .showdetail .time-place {
+            display: block;
+            font-size: 0.12rem;
+            color: #999;
+            margin-top: 0.09rem; }
+          .allshows .allshows-list ul li .showdetail .comment {
+            display: block;
+            font-size: .12rem;
+            color: #999;
+            margin: .04rem 0 .16rem; }
+          .allshows .allshows-list ul li .showdetail .price {
+            display: block;
+            color: #FF2661;
+            font-size: 0.18rem; }
+
+.memberWrap {
+  width: 100%;
+  height: auto;
+  background: #f6f7f9; }
+  .memberWrap .person-info {
+    width: 100%;
+    height: 1.72rem;
+    background: linear-gradient(270deg, #ff5aa5 0%, #ff2661 100%);
+    position: relative;
+    display: flex; }
+    .memberWrap .person-info .custom-avatar {
+      left: 5%;
+      top: 20%;
+      position: absolute;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: url(https://static.piaoniu.com/m/static/img/defaultAvatar.99f8eed.png) no-repeat center;
+      background-size: cover;
+      z-index: 3; }
+    .memberWrap .person-info .personCenter {
+      position: absolute;
+      width: 21vw;
+      height: .32rem;
+      background-color: rgba(0, 0, 0, 0.13);
+      text-align: center;
+      color: #fff;
+      font-size: .12rem;
+      line-height: .32rem;
+      border-radius: 10vw 0 0 10vw;
+      right: 0;
+      top: 25%; }
+    .memberWrap .person-info .logintip {
+      position: absolute;
+      left: 25%;
+      top: 20%;
+      color: #fff;
+      font-size: .18rem; }
+    .memberWrap .person-info .counts {
+      width: 100%;
+      height: .49rem;
+      align-self: flex-end;
+      display: flex;
+      justify-content: space-between; }
+      .memberWrap .person-info .counts li {
+        width: 25%;
+        height: 100%; }
+        .memberWrap .person-info .counts li span {
+          width: 100%;
+          height: .24rem;
+          display: block;
+          text-align: center;
+          line-height: .20rem;
+          color: #fff;
+          font-size: .12rem; }
+        .memberWrap .person-info .counts li .num {
+          font-size: 15px;
+          line-height: .3rem; }
+  .memberWrap .trade-info {
+    width: 100%;
+    height: 1.15rem;
+    background: #fff;
+    margin-bottom: .1rem; }
+    .memberWrap .trade-info .mytrade {
+      height: .45rem;
+      display: flex;
+      justify-content: space-between; }
+      .memberWrap .trade-info .mytrade h2 {
+        height: 100%;
+        line-height: .45rem;
+        color: #262626;
+        font-size: .16rem;
+        margin-left: .2rem;
+        font-weight: normal; }
+      .memberWrap .trade-info .mytrade .alltrade {
+        height: 100%;
+        line-height: .45rem;
+        color: #999;
+        font-size: .14rem; }
+    .memberWrap .trade-info .nowtrade {
+      width: 100%;
+      height: .7rem;
+      display: flex;
+      justify-content: space-between; }
+      .memberWrap .trade-info .nowtrade .nopay, .memberWrap .trade-info .nowtrade .nosend, .memberWrap .trade-info .nowtrade .noreceive {
+        width: 33.3%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center; }
+        .memberWrap .trade-info .nowtrade .nopay img, .memberWrap .trade-info .nowtrade .nosend img, .memberWrap .trade-info .nowtrade .noreceive img {
+          width: .22rem;
+          height: .22rem; }
+        .memberWrap .trade-info .nowtrade .nopay span, .memberWrap .trade-info .nowtrade .nosend span, .memberWrap .trade-info .nowtrade .noreceive span {
+          font-size: .12rem;
+          color: #666666; }
+  .memberWrap .discount {
+    height: .7rem;
+    background: #fff;
+    display: flex;
+    margin-bottom: .1rem; }
+    .memberWrap .discount .discount-coupon {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      .memberWrap .discount .discount-coupon span {
+        display: block;
+        text-align: center; }
+      .memberWrap .discount .discount-coupon .num1 {
+        font-size: .16rem;
+        color: #ff2661; }
+      .memberWrap .discount .discount-coupon .coupon {
+        font-size: .12rem;
+        color: #666; }
+    .memberWrap .discount .gift-card {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      .memberWrap .discount .gift-card span {
+        display: block;
+        text-align: center; }
+      .memberWrap .discount .gift-card .num2 {
+        font-size: .16rem;
+        color: #ff2661; }
+      .memberWrap .discount .gift-card .card {
+        font-size: .12rem;
+        color: #666; }
+  .memberWrap .benefit-info {
+    height: 1.2rem;
+    background: #fff;
+    margin-bottom: .1rem; }
+    .memberWrap .benefit-info h2 {
+      height: .4rem;
+      line-height: .4rem;
+      color: #262626;
+      font-size: .16rem;
+      margin-left: .2rem;
+      font-weight: normal; }
+    .memberWrap .benefit-info .benefit-model {
+      height: .8rem;
+      display: flex;
+      align-items: center; }
+      .memberWrap .benefit-info .benefit-model .invite-friend {
+        width: 50%;
+        height: .48rem;
+        display: flex;
+        margin-left: .2rem; }
+        .memberWrap .benefit-info .benefit-model .invite-friend img {
+          width: .48rem;
+          height: .48rem; }
+        .memberWrap .benefit-info .benefit-model .invite-friend .invite-text {
+          width: 50%;
+          height: .48rem;
+          margin-left: .1rem; }
+          .memberWrap .benefit-info .benefit-model .invite-friend .invite-text span {
+            display: block; }
+          .memberWrap .benefit-info .benefit-model .invite-friend .invite-text .title {
+            color: #262626;
+            font-size: .14rem; }
+          .memberWrap .benefit-info .benefit-model .invite-friend .invite-text .text {
+            color: #999;
+            font-size: .12rem; }
+      .memberWrap .benefit-info .benefit-model .club {
+        width: 50%;
+        height: .48rem;
+        display: flex;
+        margin-left: .2rem; }
+        .memberWrap .benefit-info .benefit-model .club img {
+          width: .48rem;
+          height: .48rem; }
+        .memberWrap .benefit-info .benefit-model .club .club-text {
+          width: 50%;
+          height: .48rem;
+          margin-left: .1rem; }
+          .memberWrap .benefit-info .benefit-model .club .club-text span {
+            display: block; }
+          .memberWrap .benefit-info .benefit-model .club .club-text .title {
+            color: #262626;
+            font-size: .14rem; }
+          .memberWrap .benefit-info .benefit-model .club .club-text .text {
+            color: #999;
+            font-size: .12rem; }
+  .memberWrap .other-func {
+    height: 1.32rem;
+    background: #fff; }
+    .memberWrap .other-func li {
+      height: .44rem;
+      display: flex;
+      justify-content: space-between; }
+      .memberWrap .other-func li span {
+        font-size: .14rem;
+        display: block;
+        height: .44rem;
+        line-height: .44rem; }
+      .memberWrap .other-func li .func1, .memberWrap .other-func li .func2, .memberWrap .other-func li .func3 {
+        margin-left: .2rem; }
+      .memberWrap .other-func li span:nth-last-of-type(1) {
+        margin-right: .2rem;
+        color: #aaa; }
+
+.loginWrap {
+  width: 100%;
+  height: auto; }
+  .loginWrap h2 {
+    height: .26rem;
+    font-size: .22rem;
+    text-align: center;
+    font-weight: normal;
+    margin-top: .5rem; }
+  .loginWrap .pwdlogin {
+    height: 2.14rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: .25rem; }
+    .loginWrap .pwdlogin input {
+      height: .46rem;
+      width: 80%;
+      align-self: center;
+      border: none;
+      border-bottom: solid 1px #ccc; }
+    .loginWrap .pwdlogin .loginbtn {
+      margin-top: .32rem;
+      height: .45rem;
+      width: 80%;
+      align-self: center;
+      background: #ff2661;
+      color: #fff;
+      text-align: center;
+      font-size: .17rem;
+      line-height: .45rem; }
+    .loginWrap .pwdlogin .logintip {
+      height: .35rem;
+      width: 80%;
+      align-self: center;
+      display: flex;
+      justify-content: space-between;
+      margin: .08rem .3rem; }
+      .loginWrap .pwdlogin .logintip .xieyi {
+        width: 50%;
+        height: 100%;
+        font-size: .12rem;
+        line-height: .35rem;
+        display: flex;
+        align-items: center; }
+        .loginWrap .pwdlogin .logintip .xieyi .checkbox {
+          width: .12rem;
+          height: .12rem;
+          margin-right: .1rem;
+          background: #4b8feb; }
+          .loginWrap .pwdlogin .logintip .xieyi .checkbox.active2 {
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAB/0lEQVRIS+2WS2gTURSGvzuPjJlgsC60G19F6kJQiFakuFFsJNCNIoiKuBNxY0EKduFGKAUXiggqIi6FLizUB1JoF+omiAgKSlGqYFVE0dbIZPKYh9zBVsZkmkAyO2d5mfN/95z733OuADh0o9Ctet6I77MXSMu1Fr6CEEy6ijI0eiL9RkhxxfXyQEcLovVC5zxV2SmOXJ+/4/scaLN4ICcEY+LwtfmfbShL1P4KEuDHsfsFzf+Axep2mIIzOZOKA+fHrcX1tpRodVphqD/FqrTCzFeHc2NtBKxdqXC2P8UKU+HtF4cLD4tY5b++aSmD7k6VwVyKlCF4OVvl0kSRshP2ZAhgJkCy7Upj425dozGwz8TQBPmZClenbByvNi4EuHx0OQkNhu9afJyr8/ef+N6NOid3J9FUwdTrMreelPAjblMIMJBNsqMrQcH2GL5nMfujFtK3Wef4riSKEIw/LzH6tLxkuiGAphCknVmn14Xszxgc7DECwdv5Eg9eNK5lzSEHkKxJZr3OL5nJfYsP3z2O9S4jt8XA9XxuPrZ5NF1tfFCy4dXrRRJyOmuyTUJKHtOfXXq6dKquz5XJIs/e/2OVJVCRNlUlpM9k+wY9CLcrPhcnLF59cpvaeVPNTkJO7UmyqVMLxN99i3ZWFLWli9ZMKvEPnNhHZuxDP+5ny2+geenbF+XtSQAAAABJRU5ErkJggg==) no-repeat center;
+            background-size: cover; }
+      .loginWrap .pwdlogin .logintip .mobilelogin {
+        line-height: .35rem;
+        font-size: .12rem; }
+
+@font-face {
+  font-family: 'swiper-icons';
+  src: url("data:application/font-woff;charset=utf-8;base64, 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") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+:root {
+  --swiper-theme-color: $themeColor; }
+
+.swiper-container {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  /* Fix of Webkit flickering */
+  z-index: 1; }
+
+.swiper-container-vertical > .swiper-wrapper {
+  flex-direction: column; }
+
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  box-sizing: content-box; }
+
+.swiper-container-android .swiper-slide,
+.swiper-wrapper {
+  transform: translate3d(0px, 0, 0); }
+
+.swiper-container-multirow > .swiper-wrapper {
+  flex-wrap: wrap; }
+
+.swiper-container-multirow-column > .swiper-wrapper {
+  flex-wrap: wrap;
+  flex-direction: column; }
+
+.swiper-container-free-mode > .swiper-wrapper {
+  transition-timing-function: ease-out;
+  margin: 0 auto; }
+
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition-property: transform; }
+
+.swiper-slide-invisible-blank {
+  visibility: hidden; }
+
+/* Auto Height */
+.swiper-container-autoheight, .swiper-container-autoheight .swiper-slide {
+  height: auto; }
+
+.swiper-container-autoheight .swiper-wrapper {
+  align-items: flex-start;
+  transition-property: transform, height; }
+
+/* 3D Effects */
+.swiper-container-3d {
+  perspective: 1200px; }
+  .swiper-container-3d .swiper-wrapper, .swiper-container-3d .swiper-slide, .swiper-container-3d .swiper-slide-shadow-left, .swiper-container-3d .swiper-slide-shadow-right, .swiper-container-3d .swiper-slide-shadow-top, .swiper-container-3d .swiper-slide-shadow-bottom, .swiper-container-3d .swiper-cube-shadow {
+    transform-style: preserve-3d; }
+  .swiper-container-3d .swiper-slide-shadow-left, .swiper-container-3d .swiper-slide-shadow-right, .swiper-container-3d .swiper-slide-shadow-top, .swiper-container-3d .swiper-slide-shadow-bottom {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10; }
+  .swiper-container-3d .swiper-slide-shadow-left {
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); }
+  .swiper-container-3d .swiper-slide-shadow-right {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); }
+  .swiper-container-3d .swiper-slide-shadow-top {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); }
+  .swiper-container-3d .swiper-slide-shadow-bottom {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); }
+
+.swiper-pagination {
+  position: absolute;
+  text-align: center;
+  transition: 300ms opacity;
+  transform: translate3d(0, 0, 0);
+  z-index: 10; }
+
+.swiper-pagination.swiper-pagination-hidden {
+  opacity: 0; }
+
+/* Common Styles */
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 10px;
+  left: 0;
+  width: 100%; }
+
+/* Bullets */
+.swiper-pagination-bullets-dynamic {
+  overflow: hidden;
+  font-size: 0; }
+
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+  transform: scale(0.33);
+  position: relative; }
+
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active {
+  transform: scale(1); }
+
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main {
+  transform: scale(1); }
+
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev {
+  transform: scale(0.66); }
+
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev {
+  transform: scale(0.33); }
+
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next {
+  transform: scale(0.66); }
+
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next {
+  transform: scale(0.33); }
+
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  border-radius: 100%;
+  background: #000;
+  opacity: 0.2; }
+
+button.swiper-pagination-bullet {
+  border: none;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  cursor: pointer; }
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: var(--swiper-pagination-color, var(--swiper-theme-color)); }
+
+.swiper-container-vertical > .swiper-pagination-bullets {
+  right: 10px;
+  top: 50%;
+  transform: translate3d(0px, -50%, 0); }
+
+.swiper-container-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 6px 0;
+  display: block; }
+
+.swiper-container-vertical > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px; }
+
+.swiper-container-vertical > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+  display: inline-block;
+  transition: 200ms transform, 200ms top; }
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 4px; }
+
+.swiper-container-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap; }
+
+.swiper-container-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+  transition: 200ms transform, 200ms left; }
+
+.swiper-container-horizontal.swiper-container-rtl > .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+  transition: 200ms transform, 200ms right; }
+
+/* Progress */
+.swiper-pagination-progressbar {
+  background: rgba(0, 0, 0, 0.25);
+  position: absolute; }
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background: var(--swiper-pagination-color, var(--swiper-theme-color));
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+  transform-origin: left top; }
+
+.swiper-container-rtl .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  transform-origin: right top; }
+
+.swiper-container-horizontal > .swiper-pagination-progressbar,
+.swiper-container-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+  width: 100%;
+  height: 4px;
+  left: 0;
+  top: 0; }
+
+.swiper-container-vertical > .swiper-pagination-progressbar,
+.swiper-container-horizontal > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+  width: 4px;
+  height: 100%;
+  left: 0;
+  top: 0; }
+
+.swiper-pagination-white {
+  --swiper-pagination-color: #ffffff; }
+
+.swiper-pagination-black {
+  --swiper-pagination-color: #000000; }
+
+.swiper-pagination-lock {
+  display: none; }
+
+/* CSS Mode */
+.swiper-container-css-mode > .swiper-wrapper {
+  overflow: auto;
+  scrollbar-width: none;
+  /* For Firefox */
+  -ms-overflow-style: none;
+  /* For Internet Explorer and Edge */ }
+  .swiper-container-css-mode > .swiper-wrapper::-webkit-scrollbar {
+    display: none; }
+
+.swiper-container-css-mode > .swiper-wrapper > .swiper-slide {
+  scroll-snap-align: start start; }
+
+.swiper-container-horizontal.swiper-container-css-mode > .swiper-wrapper {
+  scroll-snap-type: x mandatory; }
+
+.swiper-container-vertical.swiper-container-css-mode > .swiper-wrapper {
+  scroll-snap-type: y mandatory; }

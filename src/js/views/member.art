@@ -1,0 +1,75 @@
+<div class="memberWrap">
+    <div class="person-info">
+        <div class="custom-avatar">
+            
+        </div>
+        <div class="personCenter">
+            个人主页 >
+        </div>
+        <div class="logintip">
+            请登录
+        </div>
+        <ul class="counts">
+            <li><span class="num">0</span><span class="text">想看</span></li>
+            <li><span class="num">0</span><span class="text">评论</span></li>
+            <li><span class="num">0</span><span class="text">关注</span></li>
+            <li><span class="num">0</span><span class="text">粉丝</span></li>
+        </ul>
+    </div>
+    <div class="trade-info">
+        <div class="mytrade">
+            <h2>我的订单</h2>
+            <div class="alltrade">
+                查看全部订单&nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;  
+            </div>
+        </div>
+        <div class="nowtrade">
+            <div class="nopay">
+                <img src="https://static.piaoniu.com/m/static/img/order-topay.4cf62ce.png" alt="">
+                <span>待付款</span>
+            </div>
+            <div class="nosend">
+                <img src="https://static.piaoniu.com/m/static/img/order-tosend.20248ed.png" alt="">
+                <span>待发货</span>
+            </div>
+            <div class="noreceive">
+                <img src="https://static.piaoniu.com/m/static/img/order-toreceive.d23cc4e.png" alt="">
+                <span>待收货</span>
+            </div>
+        </div>
+    </div>
+    <div class="discount">
+        <div class="discount-coupon">
+            <span class="num1">0</span>
+            <span class="coupon">优惠券</span>
+        </div>
+        <div class="gift-card">
+            <span class="num2">0</span>
+            <span class="card">礼品卡</span>
+        </div>
+    </div>
+    <div class="benefit-info">
+        <h2>我的福利</h2>
+        <div class="benefit-model">
+            <div class="invite-friend">
+                <img src="https://static.piaoniu.com/m/static/img/icon-redpackage.e078ab8.png" alt="">
+                <div class="invite-text">
+                    <span class="title">邀请好友</span>
+                    <span class="text">反现金10元</span>
+                </div>
+            </div>
+            <div class="club">
+                <img src="https://static.piaoniu.com/m/static/img/icon-club.959250b.png" alt="">
+                <div class="club-text">
+                    <span class="title">圈圈俱乐部</span>
+                    <span class="text">达人专属奖励</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul class="other-func">
+        <li><span class="func1">地址管理</span><span>></span></li>
+        <li><span class="func2">帮助与客服</span><span>></span></li>
+        <li><span class="func3">卖家招募</span><span>></span></li>
+    </ul>
+</div>

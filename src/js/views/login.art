@@ -1,0 +1,15 @@
+<div class="loginWrap">
+    <h2>账户密码登录</h2>
+    <div class="pwdlogin">
+        <input type="text" placeholder="请输入用户名" class="account">
+        <input type="password" placeholder="请输入密码" class="passkey">
+        <div class="loginbtn">登录</div>
+        <div class="logintip">
+            <div class="xieyi">
+                    <div class="checkbox"></div>
+                    <span>已阅读并同意<a href="#">注册协议</a></span>
+            </div>
+            <a href="#" class="mobilelogin">手机登录</a>      
+        </div>
+    </div>
+</div>
